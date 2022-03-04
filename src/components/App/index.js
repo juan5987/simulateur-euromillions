@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from 'components/Header';
 import Draw from 'components/Draw';
 import 'styles/app.scss';
@@ -8,15 +8,17 @@ const draw = {
   stars: [3, 9],
 }
 
-export const drawContext = React.createContext(draw);
+export const drawContext = React.createContext();
 
 const App = () => {
 
+  const [drawState, setDrawState] = useState(draw);
+
   return (
-    <drawContext.Provider value={draw}>
+    <drawContext.Provider value={drawState}>
       <div className="app">
         <Header />
-        <Draw />
+        <Draw setDrawState={setDrawState} />
       </div>
     </drawContext.Provider>
   );
