@@ -1,0 +1,33 @@
+.header{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    padding: 1rem;
+    text-align: center;
+    background-color: #06056b;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &__logo{
+        display: flex;
+        align-items: center;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__title{
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+    
+        &__subtitle{
+            font-size: 1rem;
+            color: rgb(241, 186, 0);
+        }
+    }
+}
